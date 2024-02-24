@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherBroadcast</string>
+    <string name="enter_any_city_name">Enter any city name...</string>
+    <string name="_20">20°</string>
+    <string name="city">City</string>
+    <string name="humidity">Humidity:</string>
+    <string name="_50">50%</string>
+    <string name="wind_speed">Wind speed</string>
+    <string name="_5_m_s">5 m/s</string>
+</resources>
