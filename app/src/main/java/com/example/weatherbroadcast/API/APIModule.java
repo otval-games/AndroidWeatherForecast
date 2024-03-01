@@ -8,16 +8,12 @@ import com.example.weatherbroadcast.MainApp;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
 
 public class APIModule extends AsyncTask<Void, Void, String>  {
-    private String city;
-    private MainApp app;
+    private final String city;
+    private final MainApp app;
 
     public APIModule(String city, MainApp app) {
         this.city = city;
@@ -51,12 +47,12 @@ public class APIModule extends AsyncTask<Void, Void, String>  {
 
                 Parser.parseJSON(response.toString(), city, app);
 
-                Log.d("API Success", String.valueOf(responseCode));
                 connection.disconnect();
+                Log.d("API Success", String.valueOf(responseCode));
                 return response.toString();
             }else {
-                Log.e("API Error", String.valueOf(responseCode));
                 connection.disconnect();
+                Log.e("API Error", String.valueOf(responseCode));
                 return "Error";
             }
 

@@ -28,7 +28,7 @@ public class Parser {
             app.setCityText(city);
             app.setTempText((temperature) + "°");
             app.setHumidityText((humidity) + "%");
-            app.setWindSpeedText((windSpeed) + "km/h");
+            app.setWindSpeedText((windSpeed) + "m/s");
             app.setWeatherImg(icon);
 
         } catch (JSONException e) {
